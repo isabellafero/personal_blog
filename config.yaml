@@ -1,0 +1,116 @@
+baseURL: "http://isabellafero.github.io/personal_blog/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: Isabella Oliveira
+paginate: 5
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+    disableXML: true
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Search
+                  url: search/
+                  weight: 5
+                - name: Tags
+                  url: tags/
+                  weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: ""
+    author: Isabella Oliveira
+
+    defaultTheme: auto
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    comments: true
+
+    homeInfoParams:
+        Title: "Isabella Oliveira"
+        Content: ""
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/isabellafero"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/isabellaferoli/"
+
+    assets:
+        disableHLJS: true
+
+    profileMode:
+        enabled: true
+        title: Isabella Oliveira
+        subtitle: "Software Developer"
+        imageUrl: "https://avatars.githubusercontent.com/u/13948405?v=4"
+        imageTitle: Isabella
+        buttons:
+            # - name: Resume
+            #   url: archives
+            - name: Currículo
+              url: "https://drive.google.com/file/d/168SOzT7796STwPwJsyoUNJarzmILqFg9/view?usp=sharing"
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/isabellafero"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/isabellaferoli/"
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
